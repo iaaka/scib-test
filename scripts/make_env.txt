@@ -1,0 +1,14 @@
+conda env create -f scib-pipeline-R4.0.yml
+conda activate scib-pipeline-R4.0
+python -m ipykernel install --user --name=scib-pipeline-R4.0
+
+# the yml is based on
+wget https://raw.githubusercontent.com/theislab/scib-pipeline/main/envs/scib-pipeline-R4.0.yml
+# the only difference is that I commented "igraph<0.10" to prevent some incompatible dependences
+
+# you may need following commands
+# conda remove -n scib-pipeline-R4.0 --all
+# jupyter kernelspec uninstall scib-pipeline-R4.0
+
+# ipynb to html 
+#jupyter nbconvert --to html human_pancreas.v01.ipynb
